@@ -14,6 +14,7 @@ graph TD
     D -->|Add maps screenshot as a FeedItem| C
     C -->|Once case FeedItem has been updated <br>send message to Teams channel| E[Teams]
 ```
+
 # Prerequisites
 
 1. Set up a free AWS S3 account at [AWS Free Tier](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all)

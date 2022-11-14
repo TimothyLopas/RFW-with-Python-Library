@@ -78,9 +78,9 @@ Find mailing address from case number
     ${contact_query}=
     ...    Salesforce Query Result As Table
     ...    SELECT Id, MailingAddress FROM Contact WHERE Id = '${contact_id}'
-    ${mailing_address_dict}=    Set Variable    ${contact_query}[0][1]
+    # ${mailing_address_dict}=    Set Variable    ${contact_query}[0][1]
     ${mailing_address}=    Set Variable
-    ...    ${mailing_address_dict}[street]${SPACE}${mailing_address_dict}[city],${SPACE}${mailing_address_dict}[state]${SPACE}${mailing_address_dict}[postalCode]
+    ...    ${contact_query}[0][8]${SPACE}${contact_query}[0][1],${SPACE}${contact_query}[0][7]${SPACE}${contact_query}[0][6]
     RETURN    ${mailing_address}    ${case_id}
 
 Search for propery
